@@ -1,0 +1,2 @@
+Lately we got the player position, get the player position and move the player by one column and one row.
+See #todo
