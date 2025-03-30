@@ -1,19 +1,8 @@
 <?php
 // MAP RENDERING
-include 'functions.php';
-include 'map.php';
+include_once 'functions.php';
 
-function findNumber($map, $target) {
-	foreach ($map as $rowIndex => $row) {
-		foreach ($row as $colIndex => $cell) {
-			if ($cell == $target) {
-				return ["x" => $rowIndex, "y" => $colIndex]; // Return the position of "3"
-			}
-		}
-	}
-	return null; // If "3" is not found
-}
-
+// RENDERING PART, THE MAIN LOGIC AND GAME STARTS HERE
 echo "<table border='1' cellspacing='0' cellpadding='1'>";
 foreach ($map as $row) {
 	echo "<tr>";
@@ -26,9 +15,7 @@ foreach ($map as $row) {
 echo "</table>";
 
 
-$position = findNumber($map, 3);
-
-// #todo 
+$position = findPosition($map, 3);
 
 $x = $position['x'];
 $y = $position['y'];
