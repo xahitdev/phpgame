@@ -3,6 +3,10 @@ include_once 'player.php';
 include_once 'map.php';
 include_once 'game.php';
 
+//DEFINES
+
+$direction = "";
+
 function findPosition($map, $target) {
 	foreach ($map as $rowIndex => $row) {
 		foreach ($row as $colIndex => $cell) {
@@ -14,13 +18,13 @@ function findPosition($map, $target) {
 	return null; // If "3" is not found
 }
 
-function positionParser(){
+function movePlayer($x, $y){
+	global $map;
+	global $direction;
 
+	#todo
+
+	/* echo $map[$x][$y]; */
 }
-
-function printPlayerPos($x, $y){
-    echo "<script type='text/javascript'>alert('" . " x axis: " . $x . " y axis: ". $y . "');</script>";
-}
-
 
 ?>
