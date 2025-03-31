@@ -1,8 +1,13 @@
 <?php
 // MAP RENDERING
+session_start();
+
 include_once 'functions.php';
 
-echo $direction;
+$direction = isset($_SESSION['direction']) ? $_SESSION['direction'] : "none";
+echo "current direction is: " . $direction;
+
+/* echo $direction = ; */
 
 // RENDERING PART, THE MAIN LOGIC AND GAME STARTS HERE
 echo "<table border='1' cellspacing='0' cellpadding='1'>";
@@ -29,6 +34,19 @@ if($position){
 
 movePlayer($x, $y);
 
+function movePlayer(){
+	global $map, $direction;
+
+	if($direction == "up") playerMoveUp();
+	elseif($direction == "down") playerMoveDown();
+	elseif($direction == "right") playerMoveRight();
+	elseif($direction == "left") playerMoveLeft();
+	
+	/* echo $map[$x][$y]; */
+}
+function playerMoveDown(){
+#todo
+}
 ?>
 
 <script>
