@@ -44,9 +44,20 @@ function movePlayer(){
 	
 	/* echo $map[$x][$y]; */
 }
+
 function playerMoveDown(){
-#todo
+	echo "debug";
 }
+function playerMoveUp(){
+	echo "debug";
+}
+function playerMoveLeft(){
+	echo "debug";
+}
+function playerMoveRight(){
+	echo "debug";
+}
+
 ?>
 
 <script>
